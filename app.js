@@ -240,6 +240,7 @@ app.post('/webhook/', (req, res) => {
 
 		default:
 			//unhandled action, just send back the text
+			console.log("***** Action doesnot exists ***** "+actionName);
 			break;
 	}
 });
@@ -259,5 +260,6 @@ function isDefined(obj) {
 
 // Spin up the server
 app.listen(app.get('port'), function () {
-	console.log('running on port', app.get('port'))
+	console.log("***** Server Started ***** ");
+	console.log(' ***** Running on port ***** ', app.get('port'))
 })
